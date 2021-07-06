@@ -8,3 +8,5 @@
 export PATH="/usr/local/sbin:$PATH" # Some Homebrew packages want this
 
 export GPG_TTY=$(tty) # Required for GPG signing
+
+export HOMEBREW_NO_ANALYTICS=1  # Disable Homebrew analytics
