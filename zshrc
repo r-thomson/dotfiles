@@ -12,6 +12,9 @@
 setopt NO_CASE_GLOB # Case-insensitive globbing (~/d* => ~/Documents)
 setopt INTERACTIVECOMMENTS # Enable comments in the command line
 
+# For a discussion of VISUAL vs EDITOR, see https://unix.stackexchange.com/q/4859
+export VISUAL=$(whence vim)
+
 # =======
 # History
 # =======
