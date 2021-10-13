@@ -49,7 +49,7 @@ alias open.="open ." # My favorite typo
 alias trash="trash -F" # Ensures "put back" still works
 alias vscode="code"
 history() { builtin history $1 1 | less +G }
-bundleid() { osascript -e "id of app '$1'" }
+bundleid() { osascript -e "id of app \"$1\"" }
 copyip() { ipconfig getifaddr en0 | pbcopy }
 copyuuid() { echo -n `uuidgen` | tr '[:upper:]' '[:lower:]' | pbcopy }
 title() { printf '\e]1;%s\a' "$(echo -n $@)" } # Sets tab title in macOS terminal
