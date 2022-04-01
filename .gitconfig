@@ -1,0 +1,19 @@
+# Partial .gitconfig with some tweaks and aliases
+
+[pager]
+	branch = false
+	stash = false
+	tag = false
+[core]
+	# Tweaks to fix scrolling in macOS terminal
+	pager = less -+X -+F --tabs=4
+	excludesfile = ~/.gitignore
+[alias]
+	olog = log --oneline
+	stat = diff --stat
+	shortstat = diff --shortstat
+	fixup = commit --amend --no-edit
+[pull]
+	ff = only
+[init]
+	defaultBranch = master
