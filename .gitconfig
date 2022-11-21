@@ -5,8 +5,7 @@
 	stash = false
 	tag = false
 [core]
-	# Tweaks to fix scrolling in macOS terminal
-	pager = less -+X -+F --tabs=4
+	pager = delta
 	excludesfile = ~/.gitignore
 [alias]
 	olog = log --oneline
