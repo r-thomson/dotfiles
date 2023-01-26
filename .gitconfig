@@ -12,6 +12,7 @@
 	stat = diff --stat
 	shortstat = diff --shortstat
 	fixup = commit --amend --no-edit
+	ff = merge --ff-only
 [pull]
 	ff = only
 [init]
