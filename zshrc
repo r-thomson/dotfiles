@@ -53,6 +53,7 @@ history() { builtin history $1 1 | less +G }
 bundleid() { osascript -e "id of app \"$1\"" }
 copyip() { ipconfig getifaddr en0 | pbcopy }
 copyuuid() { echo -n `uuidgen` | tr '[:upper:]' '[:lower:]' | pbcopy }
+killport() { kill $(lsof -nPt -i ":$1") }
 
 # ===========
 # Completions
