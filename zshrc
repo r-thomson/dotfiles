@@ -54,6 +54,7 @@ bundleid() { osascript -e "id of app \"$1\"" }
 copyip() { ipconfig getifaddr en0 | pbcopy }
 copyuuid() { echo -n `uuidgen` | tr '[:upper:]' '[:lower:]' | pbcopy }
 killport() { kill $(lsof -nPt -i ":$1") }
+loadenv() { set -a; source "${1:-.env}"; set +a }
 
 # ===========
 # Completions
