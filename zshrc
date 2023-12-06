@@ -43,6 +43,8 @@ PROMPT2=$' %F{238}%_%f > '
 # Aliases and Functions
 # =====================
 
+alias ..="cd .."
+alias ...="cd ../.."
 alias rm="rm -i" # Make rm more safe
 alias ls="ls -p" # Add trailing slash to directories
 alias open.="open ." # My favorite typo
