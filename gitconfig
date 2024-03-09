@@ -1,19 +1,22 @@
 # Partial .gitconfig with some tweaks and aliases
 
+[alias]
+	ff = merge --ff-only
+	fixup = commit --amend --no-edit
+	olog = log --oneline
+	shortstat = diff --shortstat
+	smerge = merge --squash
+	stat = diff --stat
+[core]
+	pager = delta
+	excludesfile = ~/.gitignore
+[diff]
+	algorithm = histogram
+[init]
+	defaultBranch = master
 [pager]
 	branch = false
 	stash = false
 	tag = false
-[core]
-	pager = delta
-	excludesfile = ~/.gitignore
-[alias]
-	olog = log --oneline
-	stat = diff --stat
-	shortstat = diff --shortstat
-	fixup = commit --amend --no-edit
-	ff = merge --ff-only
 [pull]
 	ff = only
-[init]
-	defaultBranch = master
