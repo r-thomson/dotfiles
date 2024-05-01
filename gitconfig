@@ -1,6 +1,7 @@
 # Partial .gitconfig with some tweaks and aliases
 
 [alias]
+	fetchall = fetch --all --prune
 	ff = merge --ff-only
 	fixup = commit --amend --no-edit
 	olog = log --oneline
