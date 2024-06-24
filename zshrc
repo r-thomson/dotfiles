@@ -35,11 +35,11 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats ' %F{red}(%b)'
-zstyle ':vcs_info:git:*' actionformats ' %F{red}(%b|%a)'
+zstyle ':vcs_info:git:*' formats ' %F{green}(%b)'
+zstyle ':vcs_info:git:*' actionformats ' %F{green}(%b|%a)'
 
 setopt PROMPT_SUBST
-PROMPT=$'%F{238}%~${vcs_info_msg_0_}%f\n %# '
+PROMPT=$'%B%F{magenta}%~${vcs_info_msg_0_}%f%b\n %# '
 PROMPT2=$' %F{238}%_%f > '
 
 # =====================
