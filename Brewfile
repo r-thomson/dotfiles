@@ -1,12 +1,15 @@
+brew "deno"
+brew "exiftool"
 brew "ffmpeg"
 brew "gh"
 brew "git-delta"
 brew "git"
 brew "gnupg"
 brew "httpie"
+brew "imagemagick"
 brew "jq"
 brew "neofetch"
-brew "node@20", link: true
+brew "node@22", link: true
 brew "pinentry-mac"
 brew "postgresql@14", restart_service: true
 brew "redis"
@@ -15,4 +18,5 @@ brew "trash"
 brew "tree"
 brew "wget"
 brew "yarn"
+brew "yt-dlp"
 brew "zsh"
