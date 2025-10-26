@@ -61,6 +61,7 @@ copyip() { ipconfig getifaddr en0 | pbcopy }
 copyuuid() { echo -n `uuidgen` | tr '[:upper:]' '[:lower:]' | pbcopy }
 killport() { kill $(lsof -nPt -i ":$1") }
 loadenv() { set -a; source "${1:-.env}"; set +a }
+mkcd() { \mkdir -p "$1" && cd "$1" }
 isoday() { date -u +"%Y-%m-%d" }
 isonow() { date -u +"%Y-%m-%dT%H:%M:%SZ" }
 
