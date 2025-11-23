@@ -9,9 +9,9 @@ brew "httpie"
 brew "imagemagick"
 brew "jq"
 brew "neofetch"
-brew "node@22", link: true
+brew "node@24", link: true
 brew "pinentry-mac"
-brew "postgresql@14", restart_service: true
+brew "postgresql@18", restart_service: true
 brew "redis"
 brew "titlecase"
 brew "trash"
