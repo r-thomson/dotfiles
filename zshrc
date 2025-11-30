@@ -52,7 +52,6 @@ alias ...="cd ../.."
 alias rm="rm -i" # Make rm more safe
 alias ls="ls -p" # Add trailing slash to directories
 alias open.="open ." # My favorite typo
-alias trash="trash -F" # Ensures "put back" still works
 alias vscode="open -b 'com.microsoft.VSCode'"
 alias netlisten="nc -lk localhost"
 history() { builtin history $1 1 | less +G }
