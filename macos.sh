@@ -1,11 +1,14 @@
 # Enable press-and-hold key repeat
 defaults write -g ApplePressAndHoldEnabled -bool no
 
+# Disable clicking desktop to hide windows
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 # Prevent the dock from being accidentally resized or moved
 defaults write com.apple.Dock size-immutable -bool yes
 defaults write com.apple.Dock position-immutable -bool yes
-killall Dock
 # defaults write com.apple.Dock tilesize -int 48
+killall Dock
 
 # Always show proxy icons in window titlebars
 defaults write com.apple.universalaccess showWindowTitlebarIcons -bool true
