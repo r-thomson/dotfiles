@@ -9,6 +9,7 @@ git config --global alias.shash "rev-parse --short HEAD"
 git config --global alias.shortstat "diff --shortstat"
 git config --global alias.smerge "merge --squash"
 git config --global alias.stat "diff --stat"
+git config --global alias.track "add -N"
 
 git config --global core.pager delta
 git config --global core.excludesfile '~/.gitignore'
