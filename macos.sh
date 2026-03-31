@@ -4,11 +4,13 @@ defaults write -g ApplePressAndHoldEnabled -bool no
 # Disable clicking desktop to hide windows
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
+# Disable switch to space when switching to application
+defaults write -g AppleSpacesSwitchOnActivate -bool false
+
 # Prevent the dock from being accidentally resized or moved
 defaults write com.apple.Dock size-immutable -bool yes
 defaults write com.apple.Dock position-immutable -bool yes
 # defaults write com.apple.Dock tilesize -int 48
-killall Dock
 
 # Always show proxy icons in window titlebars
 defaults write com.apple.universalaccess showWindowTitlebarIcons -bool true
@@ -28,9 +30,9 @@ mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
 # Disable iOS-like text replacement
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # Keyboard shortcuts
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "<dict><key>enabled</key><false/></dict>"  # Turn Dock hiding on/off
@@ -39,3 +41,5 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 190 "<di
 # When opening TextEdit, start with a new empty plaintext file
 defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
 defaults write com.apple.TextEdit RichText -bool false
+
+killall Dock
