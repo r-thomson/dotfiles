@@ -27,6 +27,15 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 mkdir -p ~/Pictures/Screenshots
 defaults write com.apple.screencapture location ~/Pictures/Screenshots
 
+# Disable iOS-like text replacement
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Keyboard shortcuts
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "<dict><key>enabled</key><false/></dict>"  # Turn Dock hiding on/off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 190 "<dict><key>enabled</key><false/></dict>"  # Quick Note
+
 # When opening TextEdit, start with a new empty plaintext file
 defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
 defaults write com.apple.TextEdit RichText -bool false
