@@ -5,8 +5,9 @@
 # basic functional configuration like PATH.
 #
 
-export PATH="/usr/local/sbin:$PATH" # Some Homebrew packages want this
+export PATH="/usr/local/sbin:$PATH"  # Some Homebrew packages want this
 
-export GPG_TTY=$(tty) # Required for GPG signing
+export GPG_TTY=$(tty)  # Required for GPG signing
 
-export HOMEBREW_NO_ANALYTICS=1  # Disable Homebrew analytics
+export DO_NOT_TRACK=0
+export HOMEBREW_NO_ANALYTICS=1
