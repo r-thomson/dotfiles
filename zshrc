@@ -73,10 +73,5 @@ zstyle ':completion:*' matcher-list \
 	'' \
 	'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
-# Homebrew completions
-if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
 # Initialize the completion system; run commands like zstyle before this
 autoload -Uz compinit && compinit

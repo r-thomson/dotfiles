@@ -5,7 +5,7 @@
 # basic functional configuration like PATH.
 #
 
-export PATH="/usr/local/sbin:$PATH"  # Some Homebrew packages want this
+eval "$(/opt/homebrew/bin/brew shellenv)"  # Homebrew setup
 
 export GPG_TTY=$(tty)  # Required for GPG signing
 
