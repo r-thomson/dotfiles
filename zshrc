@@ -1,12 +1,7 @@
-#
 # .zshrc
 #
-# This file is run for interactive sessions. Use it for personal customization
-# like prompts, completion, aliases, etc.
-#
-
-# Moved here for now- it can't be in .zshenv because it needs to run after .zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"  # Homebrew setup
+# This file is sourced THIRD for interactive shells. Use it for
+# personal customization like prompts, completion, aliases, etc.
 
 # =================
 # General Usability

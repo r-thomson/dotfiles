@@ -1,9 +1,7 @@
-#
 # .zshenv
 #
-# This file is always run, even in scripts with the zsh shebang. Use it for
-# basic functional configuration like PATH.
-#
+# This file is sourced FIRST for all sessions. Use it for basic
+# configuration like environment variables.
 
 export GPG_TTY=$(tty)  # Required for GPG signing
 
