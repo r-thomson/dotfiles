@@ -5,8 +5,6 @@
 # basic functional configuration like PATH.
 #
 
-eval "$(/opt/homebrew/bin/brew shellenv)"  # Homebrew setup
-
 export GPG_TTY=$(tty)  # Required for GPG signing
 
 export DO_NOT_TRACK=0

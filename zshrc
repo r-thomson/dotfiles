@@ -5,6 +5,9 @@
 # like prompts, completion, aliases, etc.
 #
 
+# Moved here for now- it can't be in .zshenv because it needs to run after .zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"  # Homebrew setup
+
 # =================
 # General Usability
 # =================
@@ -74,4 +77,5 @@ zstyle ':completion:*' matcher-list \
 	'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
 
 # Initialize the completion system; run commands like zstyle before this
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit
