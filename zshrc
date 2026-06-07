@@ -73,4 +73,8 @@ zstyle ':completion:*' matcher-list \
 
 # Initialize the completion system; run commands like zstyle before this
 autoload -Uz compinit
-compinit
+if [[ -n ~/.zcompdump(#qNmh-24) ]]; then
+  compinit -C
+else
+  compinit
+fi
