@@ -56,6 +56,7 @@ history() { builtin history $1 1 | less +G }
 bundleid() { osascript -e "id of app \"$1\"" }
 copyip() { ipconfig getifaddr en0 | pbcopy }
 copyuuid() { echo -n `uuidgen` | tr '[:upper:]' '[:lower:]' | pbcopy }
+finder() { open -R "${1:-.}" }
 killport() { kill $(lsof -nPt -i ":$1") }
 loadenv() { set -a; source "${1:-.env}"; set +a }
 mkcd() { \mkdir -p "$1" && cd "$1" }
