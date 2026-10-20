@@ -1,0 +1,58 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-settings.json",
+  "autoMemoryEnabled": false,
+  "awaySummaryEnabled": false,
+  "env": {
+    "CLAUDE_CODE_THRIFTY_SONIC": "0",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "async": true,
+            "command": "osascript -e 'on run argv' -e 'display notification (item 1 of argv) with title \"Claude Code\" sound name \"Hero\"' -e 'end run' \"$(jq -r '.message // \"Claude is waiting for you\"')\"",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ]
+  },
+  "model": "opus",
+  "outputStyle": "Concise",
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git checkout *)",
+      "Bash(git mv *)",
+      "Bash(git rm *)",
+      "WebSearch"
+    ],
+    "blockReadsOutsideWorkingDirectories": true,
+    "disableAutoMode": "disable"
+  },
+  "sandbox": {
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": false,
+    "enabled": true,
+    "excludedCommands": ["gh *"],
+    "failIfUnavailable": true,
+    "filesystem": {
+      "allowRead": [
+        "~/.cache/uv/",
+        "~/.gitconfig",
+        "~/.gitignore",
+        "~/.local/share/uv/",
+        "~/.npmrc"
+      ],
+      "allowWrite": ["~/.npm/_cacache/", "~/.cache/uv/"]
+    },
+    "network": {
+      "allowLocalBinding": true
+    }
+  },
+  "switchModelsOnFlag": false
+}
