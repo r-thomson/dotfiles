@@ -82,4 +82,4 @@ fi
 
 # Prefer zsh's built-in git completions, which respect zstyle
 unfunction _git 2>/dev/null
-autoload -Uz /usr/share/zsh/$ZSH_VERSION/functions/_git
+autoload -Uz $HOMEBREW_PREFIX/share/zsh/functions/_git
