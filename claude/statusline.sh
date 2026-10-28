@@ -19,4 +19,8 @@ fi
 float usage='FIVE_HOUR_PCT > SEVEN_DAY_PCT ? FIVE_HOUR_PCT : SEVEN_DAY_PCT'
 printf -v USAGE_FMT '%.0f%%' usage
 
-print -r -- "$MODEL | $COST_FMT | $DURATION_FMT | $USAGE_FMT"
+USAGE_ICONS=(○ ◔ ◑ ◕ ●)
+integer usage_slice='usage < 100 ? usage / 20 : 4'
+USAGE_ICON=$USAGE_ICONS[usage_slice+1]
+
+print -r -- "$MODEL | ⏱ $DURATION_FMT | $COST_FMT | $USAGE_ICON $USAGE_FMT"
