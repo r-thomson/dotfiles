@@ -1,0 +1,19 @@
+{
+	"chat.disableAIFeatures": true,
+	"editor.bracketPairColorization.enabled": false,
+	"editor.fontSize": 14,
+	"editor.minimap.renderCharacters": false,
+	"editor.renderWhitespace": "boundary",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"telemetry.telemetryLevel": "off",
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.initialHint": false,
+	"update.showReleaseNotes": false,
+	"workbench.activityBar.location": "top",
+	"workbench.enableExperiments": false,
+	"workbench.experimental.modernUI": false,
+	"workbench.startupEditor": "none"
+}
