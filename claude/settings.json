@@ -32,13 +32,16 @@
       "WebSearch"
     ],
     "blockReadsOutsideWorkingDirectories": true,
+    "defaultMode": "acceptEdits",
     "disableAutoMode": "disable"
   },
   "sandbox": {
     "allowUnsandboxedCommands": false,
     "autoAllowBashIfSandboxed": false,
     "enabled": true,
-    "excludedCommands": ["gh *"],
+    "excludedCommands": [
+      "gh *"
+    ],
     "failIfUnavailable": true,
     "filesystem": {
       "allowRead": [
@@ -48,15 +51,19 @@
         "~/.local/share/uv/",
         "~/.npmrc"
       ],
-      "allowWrite": ["~/.npm/_cacache/", "~/.cache/uv/"]
+      "allowWrite": [
+        "~/.npm/_cacache/",
+        "~/.cache/uv/"
+      ]
     },
     "network": {
       "allowLocalBinding": true
     }
   },
   "statusLine": {
-    "type": "command",
-    "command": "zsh ~/.claude/statusline.sh"
+    "command": "zsh ~/.claude/statusline.sh",
+    "type": "command"
   },
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "theme": "auto"
 }
