@@ -60,6 +60,7 @@
       "allowLocalBinding": true
     }
   },
+  "showTurnDuration": false,
   "statusLine": {
     "command": "zsh ~/.claude/statusline.sh",
     "type": "command"
